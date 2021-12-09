@@ -1,5 +1,4 @@
 import { useSelector } from 'react-redux'
-import { Container } from '../UI/Container'
 import ListItem from "./ListItem"
 import { MenuStyled } from "./MenuStyled"
 
@@ -10,16 +9,14 @@ const Menu = () => {
 
     return (
         <MenuStyled>
-            <Container>
-                <section>
-                    <h1>Бургеры</h1>
-                    <ListItem itemList={burgers}/>
-                </section>
-                <section>
-                    <h1>Закуски / Напитки</h1>
-                    <ListItem itemList={others}/>
-                </section>
-            </Container>
+            <section>
+                <h1>Бургеры</h1>
+                <ListItem itemList={burgers}/>
+            </section>
+            <section>
+                <h1>Закуски / Напитки</h1>
+                <ListItem itemList={others}/>
+            </section>
         </MenuStyled>
     )
 }

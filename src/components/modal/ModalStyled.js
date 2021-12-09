@@ -26,5 +26,18 @@ export const Banner = styled.div`
     background-image: url(${props => props.img});
     background-size: cover;
     background-position: center;
-    margin-bottom: 20px;
+`
+
+export const Content = styled.section`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    height: calc(100% - 175px);
+`
+export const HeaderContent = styled.div`
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    font-weight: 500;
 `

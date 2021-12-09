@@ -2,13 +2,11 @@ import 'normalize.css'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchMenu } from './actions'
-import Footer from './components/Footer/Footer'
+import Footer from './components/footer/Footer'
 import Header from './components/header/Header'
-import Menu from './components/Menu/Menu'
+import Menu from './components/menu/Menu'
 import ModalItem from './components/modal/ModalItem'
-import { Container } from './components/UI/Container'
-
-
+import Order from './components/order/Order'
 
 
  const App = () => {
@@ -24,9 +22,8 @@ import { Container } from './components/UI/Container'
   
   return (
     <div className="App">
-      <Container>
-        <Header />
-      </Container>
+      <Header />
+      <Order />
       <Menu />
       <Footer />
       {openItem && <ModalItem />}

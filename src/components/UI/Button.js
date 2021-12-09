@@ -7,9 +7,9 @@ export const Button = styled.button`
     -moz-appearance: none;
     appearance: none;
     background-color: transparent;
-    border: 1px solid #67778c;
+    border: 1px solid #693623;
     border-radius: 0.6em;
-    color: #67778c;
+    color: #693623;
     cursor: pointer;
     display: -webkit-box;
     display: -webkit-flex;
@@ -37,7 +37,7 @@ export const Button = styled.button`
     }
 
     &:hover {
-        box-shadow: 0 0 40px 40px #67778c inset;
+        box-shadow: 0 0 40px 40px #693623 inset;
         transform: translateY(3px)
     }
 `

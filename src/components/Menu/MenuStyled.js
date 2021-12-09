@@ -4,6 +4,7 @@ import styled from 'styled-components'
 export const MenuStyled = styled.main`
     min-height: 100vh;
     margin-bottom: 60px;
+    margin-left: 385px;
 `
 
 // ListItem

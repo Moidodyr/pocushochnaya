@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 export const HeaderStyled = styled.header`
@@ -10,15 +9,6 @@ export const HeaderStyled = styled.header`
     width: 100%;
 `
 
-export const Icon = styled(FontAwesomeIcon)`
-    height: 25px;
-    width: 25px;
-    color: #693623;
-
-    &:hover {
-        color: #B49772;
-    }
-`
 export const Auth = styled.button`
     background-color: transparent;
     border: transparent;

@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { setOpenItem } from '../../actions'
-import { Banner, Modal, Overlay } from './ModalStyled'
+import { Button } from '../UI/Button'
+import { Banner, Content, HeaderContent, Modal, Overlay } from './ModalStyled'
 
 
 const ModalItem = () => {
@@ -21,7 +22,13 @@ const ModalItem = () => {
         <Overlay id='overlay' onClick={closeModal}>
             <Modal>
                 <Banner img={openItem.img}/>
-                {openItem.name}
+                <Content>
+                    <HeaderContent>
+                        <div>{openItem.name}</div>
+                        <div>{openItem.price}</div>
+                    </HeaderContent>
+                    <Button>Добавить</Button>
+                </Content>
             </Modal>
         </Overlay>
     )
