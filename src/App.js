@@ -1,17 +1,19 @@
 import 'normalize.css'
 import { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { fetchMenu } from './actions'
 import Footer from './components/Footer/Footer'
 import Header from './components/header/Header'
 import Menu from './components/Menu/Menu'
+import ModalItem from './components/modal/ModalItem'
 import { Container } from './components/UI/Container'
 
 
 
 
  const App = () => {
-  const dispatch = useDispatch()
+  const openItem = useSelector(state => state.openItem), 
+        dispatch = useDispatch()
 
   useEffect(() => {
     dispatch(fetchMenu())
@@ -27,6 +29,7 @@ import { Container } from './components/UI/Container'
       </Container>
       <Menu />
       <Footer />
+      {openItem && <ModalItem />}
     </div>
   );
 }

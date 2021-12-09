@@ -10,7 +10,7 @@ export const HeaderStyled = styled.header`
     width: 100%;
 `
 
-export const SignInIcon = styled(FontAwesomeIcon)`
+export const Icon = styled(FontAwesomeIcon)`
     height: 25px;
     width: 25px;
     color: #693623;
@@ -19,7 +19,7 @@ export const SignInIcon = styled(FontAwesomeIcon)`
         color: #B49772;
     }
 `
-export const SignIn = styled.button`
+export const Auth = styled.button`
     background-color: transparent;
     border: transparent;
     cursor: pointer;

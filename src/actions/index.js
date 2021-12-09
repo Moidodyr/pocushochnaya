@@ -36,3 +36,10 @@ const fetchMenuError = error => {
       error
     }
 }
+
+export const setOpenItem = item => {
+    return {
+        type: 'SET_OPEN_ITEM',
+        item
+    }
+}

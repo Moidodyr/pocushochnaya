@@ -1,7 +1,11 @@
+import { useDispatch } from "react-redux"
+import { setOpenItem } from "../../actions"
 import { List, Item } from "./MenuStyled"
 
 
 const ListItem = ({itemList}) => {
+    const dispatch = useDispatch()
+
     const formatCurrency = value => {
         return value.toLocaleString('ru-Ru', 
             {style: 'currency',
@@ -15,7 +19,8 @@ const ListItem = ({itemList}) => {
                 return (
                     <Item
                         key={item.id}
-                        img={item.img}>
+                        img={item.img}
+                        onClick={() => dispatch(setOpenItem(item))}>
                         <p>{item.name}</p>
                         <p>{formatCurrency(item.price)}</p>
                     </Item>

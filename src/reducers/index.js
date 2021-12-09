@@ -1,7 +1,8 @@
 const initialState = {
     menu: [],
     loading: false,
-    error: null
+    error: null,
+    openItem: null
 }
 
 
@@ -17,13 +18,18 @@ const reduser = (state = initialState, action) => {
                 ...state,
                 menu: action.menu,
                 loading: false,
-                error: '',
             }
         case 'FETCH_MENU_ERROR':
             return {
-                menu: [],
+                ...state,
                 loading: false,
                 error: action.error
+            }
+        case 'SET_OPEN_ITEM':
+            const item = action.item
+            return {
+                ...state,
+                openItem: item
             }
         
         default: return state
