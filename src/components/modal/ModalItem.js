@@ -1,14 +1,12 @@
 import { useDispatch, useSelector } from 'react-redux'
-import { setOpenItem } from '../../actions'
+import { setOpenItem, setOrders } from '../../actions'
 import { Button } from '../UI/Button'
 import { Banner, Content, HeaderContent, Modal, Overlay } from './ModalStyled'
 
 
 const ModalItem = () => {
-    const openItem = useSelector(state => state.openItem), 
+    const openItem = useSelector(state => state.openItem),
           dispatch = useDispatch()
-
-          console.log(openItem);
 
     const closeModal = e => {
         if(e.target.id === 'overlay') {
@@ -16,6 +14,11 @@ const ModalItem = () => {
         } else {
             return null
         }
+    }
+
+    const addToOrder = () => {
+        dispatch(setOrders(openItem))
+        dispatch(setOpenItem(null))
     }
 
     return (
@@ -27,7 +30,7 @@ const ModalItem = () => {
                         <div>{openItem.name}</div>
                         <div>{openItem.price}</div>
                     </HeaderContent>
-                    <Button>Добавить</Button>
+                    <Button onClick={addToOrder}>Добавить</Button>
                 </Content>
             </Modal>
         </Overlay>

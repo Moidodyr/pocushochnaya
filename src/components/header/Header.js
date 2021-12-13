@@ -1,17 +1,21 @@
-import { HeaderStyled } from './HeaderStyled'
-import logo from '../../assets/img/logo.png'
+import { HeaderStyled, Logo, LogoIcon, HeaderTitle } from './HeaderStyled'
 import { Auth } from './HeaderStyled'
 import { Icon } from '../UI/Icon'
+import { faBurger } from '@fortawesome/free-solid-svg-icons'
 import { faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons'
 import { faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons'
  
 
 const Header = () => (
     <HeaderStyled>
-        <img src={logo} alt="" />
+        <Logo>
+            <LogoIcon icon={faBurger} />
+            <HeaderTitle>Pocushochnaya</HeaderTitle>
+        </Logo>
         <Auth>
-            <Icon icon={faArrowRightToBracket} />
-            <Icon icon={faArrowRightFromBracket} />
+            {1 ? <Icon icon={faArrowRightToBracket} />
+                : <Icon icon={faArrowRightFromBracket} />
+            }    
         </Auth>
     </HeaderStyled>
 )

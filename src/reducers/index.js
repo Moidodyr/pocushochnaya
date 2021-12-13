@@ -2,7 +2,8 @@ const initialState = {
     menu: [],
     loading: false,
     error: null,
-    openItem: null
+    openItem: null,
+    orders: []
 }
 
 
@@ -30,6 +31,12 @@ const reduser = (state = initialState, action) => {
             return {
                 ...state,
                 openItem: item
+            }
+        case 'SET_ORDERS':
+            const order = action.order
+            return {
+                ...state,
+                orders: state.orders.concat(order)
             }
         
         default: return state

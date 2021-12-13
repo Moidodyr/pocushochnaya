@@ -43,3 +43,10 @@ export const setOpenItem = item => {
         item
     }
 }
+
+export const setOrders = order => {
+    return {
+        type: 'SET_ORDERS',
+        order
+    }
+}

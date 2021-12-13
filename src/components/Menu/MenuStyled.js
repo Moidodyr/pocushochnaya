@@ -3,15 +3,15 @@ import styled from 'styled-components'
 // Menu
 export const MenuStyled = styled.main`
     min-height: 100vh;
-    margin-bottom: 60px;
-    margin-left: 385px;
+    margin: 80px 0 60px 400px;
 `
 
 // ListItem
 export const List = styled.ul`
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
+    margin-bottom: 30px;
 `
 
 export const Item = styled.li`

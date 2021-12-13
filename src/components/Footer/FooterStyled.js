@@ -5,6 +5,7 @@ import styled from 'styled-components'
 export const FooterStyled = styled.footer`
     background-color: #1f2124;
     height: 390px;
+    margin-left: 380px;
 `
 
 export const Icon = styled.div`

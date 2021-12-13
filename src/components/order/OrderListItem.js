@@ -3,12 +3,13 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { ItemName, ItemPrice, OrderItemStyled } from "./OrdersStyled"
 
 
-const OrderListItem = () => {
+const OrderListItem = ({ order }) => {
+
     return (
         <OrderItemStyled>
-            <ItemName>js burger</ItemName>
+            <ItemName>{order.name}</ItemName>
             <span>7</span>
-            <ItemPrice>750h</ItemPrice>
+            <ItemPrice>{order.price}</ItemPrice>
             <Icon icon={faTrash} />
         </OrderItemStyled>
     )

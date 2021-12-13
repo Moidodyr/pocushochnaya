@@ -1,15 +1,24 @@
-import { OrderContent, OrderStyled, OrderTitle, Total, TotalPrice } from "./OrdersStyled"
+import { Empty, OrderContent, OrderStyled, OrderTitle, Total, TotalPrice } from "./OrdersStyled"
 import { Button } from '../UI/Button'
 import OrderListItem from "./OrderListItem"
+import { useSelector } from 'react-redux'
 
-const Order =  () => {
+
+const Order = () => {
+    const orders = useSelector(state => state.orders)
+
     return (
         <OrderStyled>
             <OrderTitle>Ваш заказ</OrderTitle>
             <OrderContent>
-                <ul>
-                    <OrderListItem />
-                </ul>
+                {orders.length
+                    ?   <ul>
+                            {orders.map(order => {
+                                return <OrderListItem key={order.id} order={order}/>
+                            })}
+                        </ul>
+                    :
+                        <Empty>Ваш список заказов пуст</Empty>}
             </OrderContent>
             <Total>
                 <span>Итого</span>

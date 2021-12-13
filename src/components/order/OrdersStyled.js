@@ -10,8 +10,10 @@ export const OrderStyled = styled.section`
     flex-direction: column;
     min-width: 380px;
     height: calc(100% - 80px);
+    padding: 0 20px;
     background-color: #fff;
-    box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.25px);
+    -webkit-box-shadow: inset 0px 0px 29px -1px rgba(0,0,0,0.85); 
+    box-shadow: inset 0px 0px 29px -1px rgba(0,0,0,0.85);   
 `
 
 export const OrderTitle = styled.h2`
@@ -35,7 +37,7 @@ export const TotalPrice = styled.div`
     margin-left: 20px;
 `
 
-export const EmptyList = styled.p`
+export const Empty = styled.p`
     text-align: center;
 `
 
