@@ -41,3 +41,22 @@ export const HeaderContent = styled.div`
     font-size: 24px;
     font-weight: 500;
 `
+
+// CountItem
+export const CountWrapper = styled.div`
+    display: flex;
+    justify-content: space-between;
+    margin: 0 15px;
+`;
+
+export const CountInput = styled.input`
+    width: 50px;
+    font-size: 20px;
+`;
+
+export const BtnCount = styled.button`
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    border: 0.5px solid #000;
+`;

@@ -18,7 +18,7 @@ export const Logo = styled.div`
     display: flex;
     align-items: center;
     width: 380px;
-    padding-left: 15px; 
+    padding-left: 15px;
 `
 
 export const LogoIcon = styled(FontAwesomeIcon)`

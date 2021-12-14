@@ -1,17 +1,11 @@
 import { useDispatch } from "react-redux"
 import { setOpenItem } from "../../actions"
+import { formatCurrency } from "../secondaryFunctions/imdex"
 import { List, Item } from "./MenuStyled"
 
 
 const ListItem = ({itemList}) => {
     const dispatch = useDispatch()
-
-    const formatCurrency = value => {
-        return value.toLocaleString('ru-Ru', 
-            {style: 'currency',
-            currency: 'RUB'
-        }
-    )}
 
     return (
         <List>

@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { setOpenItem, setOrders } from '../../actions'
 import { Button } from '../UI/Button'
+import CountItem from './CountItem'
 import { Banner, Content, HeaderContent, Modal, Overlay } from './ModalStyled'
 
 
@@ -30,6 +31,7 @@ const ModalItem = () => {
                         <div>{openItem.name}</div>
                         <div>{openItem.price}</div>
                     </HeaderContent>
+                    <CountItem />
                     <Button onClick={addToOrder}>Добавить</Button>
                 </Content>
             </Modal>

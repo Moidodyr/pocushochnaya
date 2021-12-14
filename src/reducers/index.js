@@ -3,7 +3,8 @@ const initialState = {
     loading: false,
     error: null,
     openItem: null,
-    orders: []
+    orders: [],
+    count: 1
 }
 
 
