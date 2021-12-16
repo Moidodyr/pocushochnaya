@@ -4,3 +4,5 @@ export const formatCurrency = value => {
         currency: 'RUB'
     }
 )}
+
+export const totalPriceItems = order => order.price * order.count

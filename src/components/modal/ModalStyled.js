@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 
+// ModalItem
 export const Overlay = styled.div`
     position: fixed;
     display: flex;
@@ -41,16 +42,29 @@ export const HeaderContent = styled.div`
     font-size: 24px;
     font-weight: 500;
 `
+export const TotalPriceItem = styled.div`
+    display: flex;
+    justify-content: space-between;
+`;
 
 // CountItem
+export const Count = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
 export const CountWrapper = styled.div`
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 0 15px;
 `;
 
 export const CountInput = styled.input`
     width: 50px;
+    text-align: center;
+    height: 30px;
     font-size: 20px;
 `;
 

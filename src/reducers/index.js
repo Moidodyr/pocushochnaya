@@ -39,7 +39,7 @@ const reduser = (state = initialState, action) => {
                 ...state,
                 orders: state.orders.concat(order)
             }
-        
+
         default: return state
     }
 }
