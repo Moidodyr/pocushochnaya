@@ -8,12 +8,13 @@ export const OrderStyled = styled.section`
     left: 0;
     display: flex;
     flex-direction: column;
-    min-width: 380px;
+    width: 380px;
     height: calc(100% - 80px);
     padding: 0 20px;
     background-color: #fff;
     -webkit-box-shadow: inset 0px 0px 29px -1px rgba(0,0,0,0.85); 
-    box-shadow: inset 0px 0px 29px -1px rgba(0,0,0,0.85);   
+    box-shadow: inset 0px 0px 29px -1px rgba(0,0,0,0.85);
+    overflow-y: auto;
 `
 
 export const OrderTitle = styled.h2`
@@ -45,13 +46,23 @@ export const Empty = styled.p`
 
 export const OrderItemStyled = styled.li`
     display: flex;
+    justify-content: space-between;
     margin: 15px 0;
     flex-wrap: wrap;
-    cursor: pointer;
+`
+
+export const OrderItemContent = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - (25px + 7px));
+    margin-right: 7px;
+    cursor: default;
 `
 
 export const ItemName = styled.span`
     flex-grow: 1;
+    font-weight: bold;
 `
 
 export const ItemPrice = styled.span`
@@ -71,4 +82,5 @@ export const TrashBtn = styled.button`
 export const Toppings = styled.div`
     color: #9a9a9a;
     font-size: 14px;
+    width: 100%;
 `

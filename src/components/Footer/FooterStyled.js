@@ -3,9 +3,11 @@ import styled from 'styled-components'
 
 
 export const FooterStyled = styled.footer`
+    color: #fff;
     background-color: #1f2124;
     height: 390px;
     margin-left: 380px;
+    padding-top: 30px;
 `
 
 export const Icon = styled.div`

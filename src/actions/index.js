@@ -44,6 +44,13 @@ export const setOpenItem = item => {
     }
 }
 
+export const setOrderEdit = bool => {
+    return {
+        type: 'SET_ORDER_EDIT',
+        bool
+    }
+}
+
 export const setOrders = order => {
     return {
         type: 'SET_ORDERS',

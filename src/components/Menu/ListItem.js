@@ -1,11 +1,16 @@
 import { useDispatch } from "react-redux"
-import { setOpenItem } from "../../actions"
-import { formatCurrency } from "../secondaryFunctions/imdex"
+import { setOpenItem, setOrderEdit } from "../../actions"
+import { formatCurrency } from "../secondaryFunctions"
 import { List, Item } from "./MenuStyled"
 
 
 const ListItem = ({itemList}) => {
     const dispatch = useDispatch()
+
+    const openModal = item => {
+        dispatch(setOrderEdit(false))
+        dispatch(setOpenItem(item))
+    }
 
     return (
         <List>
@@ -14,7 +19,7 @@ const ListItem = ({itemList}) => {
                     <Item
                         key={item.id}
                         img={item.img}
-                        onClick={() => dispatch(setOpenItem(item))}>
+                        onClick={() => openModal(item)}>
                         <p>{item.name}</p>
                         <p>{formatCurrency(item.price)}</p>
                     </Item>

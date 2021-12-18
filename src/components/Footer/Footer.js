@@ -6,6 +6,7 @@ import { FooterStyled, Icon, GitIcon } from "./FooterStyled"
 const Footer = () => (
     <FooterStyled>
         <Container>
+            <span>Мой github: </span>
             <a href='https://github.com/Moidodyr'>
                 <Icon>
                     <GitIcon icon={faGithub} />

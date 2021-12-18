@@ -4,7 +4,8 @@ const initialState = {
     error: null,
     openItem: null,
     orders: [],
-    count: 1
+    count: 1,
+    isOrderEdit: false
 }
 
 
@@ -28,16 +29,19 @@ const reduser = (state = initialState, action) => {
                 error: action.error
             }
         case 'SET_OPEN_ITEM':
-            const item = action.item
             return {
                 ...state,
-                openItem: item
+                openItem: action.item
             }
         case 'SET_ORDERS':
-            const order = action.order
             return {
                 ...state,
-                orders: state.orders.concat(order)
+                orders: action.order
+            }
+        case 'SET_ORDER_EDIT':
+            return {
+                ...state,
+                isOrderEdit: action.bool
             }
 
         default: return state

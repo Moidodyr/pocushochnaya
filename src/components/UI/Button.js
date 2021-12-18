@@ -40,4 +40,10 @@ export const Button = styled.button`
         box-shadow: 0 0 40px 40px #693623 inset;
         transform: translateY(3px)
     }
+
+    &:disabled {
+        color: #bbb;
+        background-color: #e6e6e6;
+        border-color: #bbb;
+    }
 `

@@ -6,7 +6,7 @@ import Footer from './components/footer/Footer'
 import Header from './components/header/Header'
 import Menu from './components/menu/Menu'
 import ModalItem from './components/modal/ModalItem'
-import Order from './components/order/Order'
+import OrderList from './components/orders/OrderList'
 
 
  const App = () => {
@@ -23,7 +23,7 @@ import Order from './components/order/Order'
   return (
     <div className="App">
       <Header />
-      <Order />
+      <OrderList />
       <Menu />
       <Footer />
       {openItem && <ModalItem />}
