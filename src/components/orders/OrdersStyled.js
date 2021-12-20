@@ -3,18 +3,16 @@ import styled from "styled-components"
 
 // Order
 export const OrderStyled = styled.section`
-    position: fixed;
-    top: 80px;
+    position: fixed;top: 80px;
     left: 0;
     display: flex;
     flex-direction: column;
-    width: 380px;
     height: calc(100% - 80px);
+    width: 380px;
     padding: 0 20px;
     background-color: #fff;
     -webkit-box-shadow: inset 0px 0px 29px -1px rgba(0,0,0,0.85); 
     box-shadow: inset 0px 0px 29px -1px rgba(0,0,0,0.85);
-    overflow-y: auto;
 `
 
 export const OrderTitle = styled.h2`
