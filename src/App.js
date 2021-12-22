@@ -1,6 +1,7 @@
 import 'normalize.css'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { useAuth } from './components/Hooks/useAuth'
 import { fetchMenu } from './actions'
 import Header from './components/header/Header'
 import Menu from './components/menu/Menu'
@@ -8,7 +9,8 @@ import ModalItem from './components/modal/ModalItem'
 import OrderList from './components/orders/OrderList'
 
 
- const App = () => {
+const App = () => {
+  const auth = useAuth()
   const openItem = useSelector(state => state.openItem), 
         dispatch = useDispatch()
 
@@ -21,7 +23,7 @@ import OrderList from './components/orders/OrderList'
   
   return (
     <div className="App">
-      <Header />
+      <Header {...auth}/>
       <OrderList />
       <Menu />
       {openItem && <ModalItem />}

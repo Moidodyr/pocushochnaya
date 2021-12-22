@@ -6,15 +6,21 @@ import { faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons'
 import { faArrowRightFromBracket } from '@fortawesome/free-solid-svg-icons'
  
 
-const Header = () => (
+const Header = ({authenticated, logIn, logOut}) => (
     <HeaderStyled>
         <Logo>
             <LogoIcon icon={faBurger} />
             <HeaderTitle>Pocushochnaya</HeaderTitle>
         </Logo>
         <Auth>
-            {1 ? <Icon icon={faArrowRightToBracket} />
-                : <Icon icon={faArrowRightFromBracket} />
+            {!authenticated
+                ? <>
+                    <Icon icon={faArrowRightToBracket} onClick={logIn}/>
+                  </>
+                : <>
+                    {authenticated.displayName}
+                    <Icon icon={faArrowRightFromBracket} onClick={logOut}/>
+                  </>
             }    
         </Auth>
     </HeaderStyled>
